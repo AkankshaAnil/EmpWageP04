@@ -10,8 +10,8 @@ internal class Program
             Console.WriteLine(" " + purpose);
             Console.WriteLine("Let's begin!");
 
-            attendence search = new attendence();
-            search.FindAttendence();
+            employee search = new employee();
+            search.EmployeeWage();
 
             Console.ReadLine();
         }
