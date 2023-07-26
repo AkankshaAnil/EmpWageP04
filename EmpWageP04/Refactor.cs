@@ -6,17 +6,17 @@ using System.Threading.Tasks;
 
 namespace EmpWageP04
 {
-    class employee
+    class EmployeeWageCalculator
     {
-        public void EmployeeWage()
+        // Class variables
+        private const int workingDaysPerMonth = 20;
+        private const int totalWorkingHours = 100;
+        private const int hourlyPayRate = 20;
+
+        // Class method to compute employee wage
+        public static void ComputeEmployeeWage()
         {
-
             Console.WriteLine("Welcome to the Employee Wage Calculator!");
-
-            // Constants for the number of working days in a month, total working hours, and the hourly pay rate
-            const int workingDaysPerMonth = 20;
-            const int totalWorkingHours = 100;
-            const int hourlyPayRate = 20;
 
             // Variables to store the total wage, total working hours, and the daily wage
             int totalWage = 0;
@@ -28,13 +28,14 @@ namespace EmpWageP04
             {
                 int workHours;
 
-                // Generate a random number to determine the work type: 0 for full-time, 1 for part-time, 2 for absent
+                
                 int workType = random.Next(0, 3);
 
                 switch (workType)
                 {
                     case 0: // Full-time
-                        workHours = 8; break;
+                        workHours = 8;
+                        break;
 
                     case 1: // Part-time
                         workHours = 4;
